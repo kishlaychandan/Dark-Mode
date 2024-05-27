@@ -1,0 +1,85 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.section{
+    display: flex;
+    width: 100%;
+    padding-top: 10rem;
+    gap: 5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+ 
+/* .background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit:fill;
+    z-index: -1;
+}  */
+
+.main{
+    background-color: black;
+    width: 120px;
+    height: 50px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: space-between;
+}
+
+.main img{
+    width: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    border-radius: 50%;
+}
+.slider{
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    transition: all 0.2s ease-in-out; /* Smooth transition */
+
+}
+
+.slider.left{
+    left: 5px;
+
+}
+.slider.right{
+    /* right: 5px; */
+    left: calc(100% - 45px);
+}
+
+
+.marquee-container {
+    width: 100%;
+}
+
+.marquee {
+    /* display: inline-block; */
+    /* white-space: nowrap; */
+    animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(18%);
+    }
+    50% {
+        transform: translateX(-3%);
+    }
+    100%{
+        transform: translateX(18%);
+    }
+}
